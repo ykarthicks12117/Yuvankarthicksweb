@@ -1,0 +1,14 @@
+.tf__single_testimonial {
+  min-height: 350px !important;
+}
+.tf__single_counter{
+    min-height: 300px !important;
+}
+.tf__address_area
+{
+  flex: 1;
+  min-width: 0;
+}
+.tf__single_address span{
+  flex-shrink: 0;
+}
