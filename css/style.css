@@ -621,6 +621,7 @@ button:focus {
 
 .tf__banner_text p {
   max-width: 80%;
+  text-align: justify;
 }
 
 .tf__banner_text ul {
@@ -663,6 +664,7 @@ button:focus {
 .tf__about_text p {
   margin-top: 45px;
   line-height: 25px;
+  text-align: justify !important;
 }
 
 .tf__about_img {
@@ -817,6 +819,7 @@ button:focus {
 
 .tf__portfolio_heading p {
   margin-bottom: 55px;
+  text-align: justify;
 }
 
 .tf__portfolio .nextArrow,
@@ -864,9 +867,9 @@ button:focus {
 .tf__testimonial_slider {
   margin-top: 30px;
 }
-.tf__single_testimonial {
+/* .tf__single_testimonial {
   min-height: 350px !important;
-}
+} */
 
 .tf__testimonial_slider .nextArrow,
 .tf__testimonial_slider .prevArrow {
@@ -904,6 +907,9 @@ button:focus {
   padding: 47px 115px 50px 40px;
   position: relative;
   margin: 35px 12px 60px 12px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
 }
 
 .tf__single_testimonial_img {
@@ -1127,8 +1133,9 @@ button:focus {
   padding: 72px 30px 63px 0px;
   position: relative;
   z-index: 1;
+  padding-left: 75px;
 }
-
+/* 
 .tf__contact_area::after {
   position: absolute;
   content: "";
@@ -1143,8 +1150,29 @@ button:focus {
   top: 0;
   z-index: -1;
   min-height: 550px;
-}
+} */
+.tf__contact_area::after {
+  position: absolute;
+  content: "";
+  background: url(../images/contact_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+  /* Changed */
+  background-attachment: scroll;
+
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: -1;
+}
 .tf__contact_area h4 {
   font-size: 24px;
   font-weight: 800;
@@ -2688,7 +2716,7 @@ button:focus {
      PRELOADER START
    ===============================*/
 
-.preloader {
+/* .preloader {
   position: fixed;
   z-index: 10;
   height: 100vh;
@@ -2749,7 +2777,7 @@ h5.preloader-text::after {
   to {
     clip-path: circle(50px at 100% 50%);
   }
-}
+} */
 
 /*==============================
      PRELOADER END
@@ -2943,3 +2971,34 @@ html.lenis {
 .bg-fixed {
   background-attachment: fixed !important;
 }
+/*26/6/26 1st change*/
+@media (min-width: 1200px) {
+
+  section.tf__contact {
+    background-image: url(../images/contact_bg.jpg) !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+    background-color: var(--colorBlack) !important;
+  }
+
+  .tf__contact_area::after {
+    display: none !important;
+    background: none !important;
+  }
+
+  .tf__contact .tf__form {
+    background: transparent !important;
+  }
+
+  .tf__contact .tf__single_form input,
+  .tf__contact .tf__single_form textarea {
+    background: rgba(0, 0, 0, 0.45) !important;
+    border: 2px solid #b1b1b157 !important;
+    color: var(--colorWhite) !important;
+  }
+
+}
+
+/*26/6/26 1st change*/

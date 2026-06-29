@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="keywords"
-      content="html, personal, personal portfolio, dark, minimal, html template, site template, designer, developer, youtuber, vloger, bloger, bootstrap, dark theme, personal dark theme, personal dark template"
+      content="html, personal, personal portfolio, dark, minimal, htm template, site template, designer, developer, youtuber, vloger, bloger, bootstrap, dark theme, personal dark theme, personal dark template"
     />
     <meta name="description" content="Isti personal portfolio HTML Template." />
     <meta name="author" content="codeefly" />
@@ -29,7 +29,7 @@
     <!--================================
         PRELOADER START
     =================================-->
-    <div class="preloader">
+    <div class="preloader">3
       <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
         <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
       </svg>
@@ -43,7 +43,7 @@
     ==============================-->
     <nav class="navbar navbar-expand-lg tf__main_menu pl_50 pr_60">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index-3.html"
+        <a class="navbar-brand" href="index.html"
           ><img src="images/yklogo.png" alt="logo" class="img-fluid w-100"
         /></a>
         <button
@@ -530,7 +530,7 @@
           <div class="col-xl-4 my-auto order-xl-2 order-1">
             <div class="tf__common_heading tf__portfolio_heading">
               <!-- <h5>My Certifications</h5> -->
-           <h2 style="color: rgb(212, 255, 0); font-size: 50px;" data-text-animation="rotate-in">
+           <h2 style="color: rgb(212, 255, 0); font-size: 40px;" data-text-animation="rotate-in">
   My Certificates
 </h2>
 
@@ -1130,6 +1130,19 @@ Advanced up to Level 3 in this national‑level competition organized by ISTE.</
     <script>
   document.getElementById("currentYear").textContent = new Date().getFullYear();
 </script>
+
+
+<script>
+document.querySelector(".tf__form").addEventListener("submit", function () {
+    const form = this;
+
+    // Wait a moment for Web3Forms to receive the data
+    setTimeout(() => {
+        form.reset();
+    }, 1000);
+});
+</script>
+
     <script src="js/plugin.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/scroll_top.js"></script>

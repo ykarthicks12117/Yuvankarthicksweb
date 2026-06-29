@@ -1,8 +1,8 @@
-.tf__single_testimonial {
+/* .tf__single_testimonial {
   min-height: 350px !important;
-}
+} */
 .tf__single_counter{
-    min-height: 300px !important;
+    min-height: 350px !important;
 }
 .tf__address_area
 {
@@ -12,3 +12,357 @@
 .tf__single_address span{
   flex-shrink: 0;
 }
+
+@media (max-width: 575.99px) {
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .container,
+  .container-fluid,
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .tf__banner {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+/* .preloader {
+  position: fixed;
+  z-index: 99999999999999;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background: #111013; 
+}
+
+.preloader svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: #111013;
+}
+
+h5.preloader-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: #333;
+  white-space: nowrap;
+  z-index: 1;  
+}
+
+@media (max-width: 1040px) {
+  h5.preloader-text {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  h5.preloader-text {
+    font-size: 40px;
+  }
+}
+
+h5.preloader-text::after {
+  content: "Yuvan Karthick S";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--colorPrimary);
+  animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+  from {
+    clip-path: circle(50px at 0% 50%);
+  }
+  to {
+    clip-path: circle(50px at 100% 50%);
+  }
+}  */
+.preloader {
+  position: fixed;
+  z-index: 99999999999999;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background: #111013;
+  /* Fix for tablet/mobile viewport height issues (address bar, bottom nav) */
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: fill-available;
+}
+
+/* Fix the html/body to prevent scroll bleed */
+html {
+  height: -webkit-fill-available;
+}
+
+body.preloader-active {
+  overflow: hidden;
+  height: 100%;
+  touch-action: none;
+}
+
+.preloader svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: #111013;
+  display: block; /* removes inline SVG bottom gap */
+}
+
+h5.preloader-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: #333;
+  white-space: nowrap;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+@media (max-width: 1040px) {
+  h5.preloader-text {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  h5.preloader-text {
+    font-size: 40px;
+  }
+
+  .preloader {
+    /* Covers browser chrome, bottom nav bar on Android/iOS tablets */
+    height: 100dvh; /* dynamic viewport height — best fix for modern browsers */
+    min-height: 100dvh;
+  }
+}
+
+@media (max-width: 480px) {
+  h5.preloader-text {
+    font-size: 28px;
+  }
+}
+
+h5.preloader-text::after {
+  content: "Yuvan Karthick S";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--colorPrimary);
+  animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+  from {
+    clip-path: circle(50px at 0% 50%);
+  }
+  to {
+    clip-path: circle(50px at 100% 50%);
+  }
+}
+/* testimonal section responsive start */
+@media (max-width: 1200px) {
+  .tf__single_testimonial {
+    min-height: 500px;
+  }
+}
+/* Tablet */
+@media (max-width: 991px) {
+  .tf__single_testimonial {
+    min-height: 500px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .tf__single_testimonial {
+    min-height: 520px;
+  }
+}
+@media (max-width: 375px) {
+  .tf__single_testimonial {
+    min-height: 600px;
+  }
+
+/* testimonal section responsive end */
+
+/* Going to make responsive neat*/
+/* ==========================================
+   TABLET RESPONSIVE FIX (768px - 991px)
+   ========================================== */
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  /* Remove horizontal overflow */
+  html,
+  body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+
+  .container,
+  .container-fluid,
+  .row {
+    max-width: 100% !important;
+  }
+
+  /* Fix portfolio shifting left */
+  .tf__main_2 {
+    left: 0 !important;
+  }
+
+  /* Contact section layout */
+  .tf__contact_area {
+    padding: 40px 20px !important;
+  }
+
+  /* Background should stay inside section */
+  .tf__contact_area::after {
+    width: 100% !important;
+    height: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    background-attachment: scroll !important;
+    background-size: cover !important;
+  }
+
+  /* Form spacing */
+  .tf__form {
+    margin-top: 30px !important;
+    padding: 35px 20px !important;
+  }
+
+  /* Contact info items */
+  .tf__single_address {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+
+  .tf__address_area {
+    width: calc(100% - 60px);
+  }
+
+  /* Prevent image overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Banner */
+  .tf__banner {
+    overflow: hidden;
+  }
+
+  .tf__banner_text {
+    padding-right: 0 !important;
+  }
+
+  .tf__banner_text p {
+    max-width: 100% !important;
+  }
+}
+
+
+/* ==========================================
+   GLOBAL OVERFLOW FIX
+   ========================================== */
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+section {
+  overflow: hidden;
+}
+
+.container-fluid {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+
+
+/* Going to make responsive neat*/
+
+/*Gonna change responsive change 2*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .tf__contact_area {
+    padding: 40px 20px !important;
+  }
+
+  .tf__contact_area::after {
+    width: 100% !important;
+    height: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    background-attachment: scroll !important;
+  }
+
+  .tf__form {
+    margin-top: 30px !important;
+  }
+
+  .tf__main_2 {
+    left: 0 !important;
+  }
+}
+/* Laptop/Desktop only */
+@media (min-width: 1200px) {
+
+    .tf__contact .row{
+        display: flex;
+        align-items: stretch;
+    }
+
+    .tf__contact_area{
+        height: 100%;
+        min-height: 560px;
+    }
+
+    .tf__contact_area::after{
+        height: 100%;
+    }
+
+}
+
